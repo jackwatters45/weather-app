@@ -3,11 +3,41 @@ import './styles/style.css';
 
 const API_KEY = '8eefd61a1a12a4ebaa7a93aed80f367c';
 
-// TODO process the data once I know what I need
-function processData(data) {
+function processData(rawData) {
+  const data = {};
+  console.log(rawData);
+
+  data.location = rawData.name;
+  data.weatherDescription = rawData.weather[0].description;
+  data.temp = rawData.main.temp;
+  data.high = rawData.main.temp_max;
+  data.low = rawData.main.temp_min;
+  data.feelsLike = rawData.main.feels_like;
+  data.humidity = rawData.main.humidity;
+  data.wind = rawData.wind.speed;
+  // time
+  // chance of rain
   console.log(data);
-  // precipitstion
+  return data;
 }
+
+// const exampleData = {
+//   main: {
+//     temp: 62.53,
+//     feels_like: 62.47,
+//     temp_min: 54.63,
+//     temp_max: 82.92,
+//     humidity: 85,
+//   },
+//   wind: {
+//     speed: 7, // mph
+//   },
+//   clouds: {
+//     all: 11,
+//   },
+//   name: 'Mill Valley',
+//   cod: 200,
+// };
 
 async function getData(lat, lon) {
   try {
@@ -17,8 +47,8 @@ async function getData(lat, lon) {
     );
     const weatherData = await weatherResponse.json();
     return processData(weatherData);
-  } catch {
-    return console.error();
+  } catch (e) {
+    return console.error(e);
   }
 }
 
@@ -34,9 +64,15 @@ async function getCoordinates(location) {
     const { lon } = locationData[0];
     // get data using lat + lon
     return getData(lat, lon);
-  } catch {
-    return console.error();
+  } catch (e) {
+    return console.error(e);
   }
 }
 
-getCoordinates('mill valley');
+const form = document.querySelector('.location-form');
+const input = document.querySelector('.location-text');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  getCoordinates(input.value);
+});

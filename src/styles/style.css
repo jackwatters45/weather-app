@@ -39,7 +39,8 @@ input {
   background-color: transparent;
   border: inherit;
   outline: none;
-  font-size: 12px;
+  font-size: 14px;
+  color: var(--main-font-color);
 }
 
 .shadow {
@@ -136,12 +137,12 @@ img {
 
 .bottom-content {
   display: flex;
-  gap: 24px;
+  justify-content: space-around;
+  gap: 15px;
 }
 
 .temp-card {
-  width: 180px;
-
+  min-width: 100px
 }
 
 .day {
