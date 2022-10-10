@@ -5,91 +5,49 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Weather App</title>
+  <link rel="icon" type="image/x-icon" href="../assets/favicon/weather-news.png">
 </head>
 
 <body>
   <div class="container">
     <div class="main-content">
       <div class="top-left">
-        <div class="weather-description">Overcast Clouds</div>
-        <div class="location">Auckland - Sunday, 9th Oct 22 5:38 pm</div>
-        <div class="weather-temp">16 °C</div>
-        <img src="../assets/img/cloudy.svg" alt="">
+        <div class="weather-description"></div>
+        <div class="location"></div>
+        <div class="weather-temp"></div>
+        <img class="current-weather-img" src="../assets/img/sunny.svg" alt="">
         <form class="location-form" action="">
           <input class="location-text" type="text" placeholder="Search.." required>
           <hr>
-          <!-- border bottom - inherit backgroudn like white font little magnifying glass-->
         </form>
       </div>
       <div class="top-right">
         <div class="other-cards">
           <img class="feels-like-img" src="../assets/img/feels-like.svg" alt="">
           <div class="card-text">Feels Like</div>
-          <div class="card-result">°C</div>
+          <div class="card-result feels-like"></div>
         </div>
         <div class="other-cards">
           <img src="../assets/img/humidty.svg" alt="">
           <div class="card-text">Humidity</div>
-          <div class="card-result">69 %</div>
+          <div class="card-result humidity"></div>
         </div>
         <div class="other-cards">
           <img src="../assets/img/chance-rain.svg" alt="">
-          <div class="card-text">Chance of Rain</div>
-          <div class="card-result">4%</div>
+          <div class="card-text">Precipitation</div>
+          <div class="card-result precipitation"></div>
         </div>
         <div class="other-cards">
           <img class="wind-img" src="../assets/img/wind.svg" alt="">
           <div class="card-text">
             Wind Speed</div>
-          <div class="card-result">20.9 km/h</div>
+          <div class="card-result wind"></div>
         </div>
       </div>
       <div class="bottom">
         <div></div>
         <div class="bottom-content">
-          <div class="temp-card">
-            <div class="day">Monday</div>
-            <div class="high">16 °C</div>
-            <div class="low">13 °C</div>
-            <img src="../assets/img/cloudy.svg" alt="">
-          </div>
-          <div class="temp-card">
-            <div class="day">Tuesday</div>
-            <div class="high">16 °C</div>
-            <div class="low">13 °C</div>
-            <img src="../assets/img/cloudy.svg" alt="">
-          </div>
-          <div class="temp-card">
-            <div class="day">Wednesday</div>
-            <div class="high">16 °C</div>
-            <div class="low">13 °C</div>
-            <img src="../assets/img/cloudy.svg" alt="">
-          </div>
-          <div class="temp-card">
-            <div class="day">Thursday</div>
-            <div class="high">16 °C</div>
-            <div class="low">13 °C</div>
-            <img src="../assets/img/cloudy.svg" alt="">
-          </div>
-          <div class="temp-card">
-            <div class="day">Friday</div>
-            <div class="high">16 °C</div>
-            <div class="low">13 °C</div>
-            <img src="../assets/img/cloudy.svg" alt="">
-          </div>
-          <div class="temp-card">
-            <div class="day">Saturday</div>
-            <div class="high">16 °C</div>
-            <div class="low">13 °C</div>
-            <img src="../assets/img/cloudy.svg" alt="">
-          </div>
-          <div class="temp-card">
-            <div class="day">Sunday</div>
-            <div class="high">16 °C</div>
-            <div class="low">13 °C</div>
-            <img src="../assets/img/cloudy.svg" alt="">
-          </div>
         </div>
       </div>
     </div>

@@ -146,16 +146,16 @@ img {
 }
 
 .day {
-  font-size: 28px;
+  font-size: 24px;
 }
 
 .high {
-  font-size: 32px;
+  font-size: 28px;
   font-weight: bold;
 }
 
 .low {
-  font-size: 24px;
+  font-size: 22px;
   margin-bottom: 10px;
 }
 
