@@ -1,7 +1,7 @@
-import { buildUpper } from './dom';
+import buildUpper from '../dom/buildUpper';
 import determineWeatherImg from './determineWeatherImg';
 
-export default async function processTodayData(rawData) {
+export default async (rawData) => {
   const data = {};
   try {
     data.location = rawData.name;
@@ -33,4 +33,4 @@ export default async function processTodayData(rawData) {
   } catch (e) {
     return e;
   }
-}
+};

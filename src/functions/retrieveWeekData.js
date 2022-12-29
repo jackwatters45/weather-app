@@ -1,9 +1,8 @@
 import processWeekData from './processWeekData';
-import API_KEY from './config';
+import API_KEY from '../config';
 
-export default async function getWeekData(location) {
+export default async (location) => {
   try {
-    // fetch locations weather data
     const weatherResponse = await fetch(
       `https://api.openweathermap.org/data/2.5/forecast?q=${location}&units=imperial&appid=${API_KEY}`,
     );
@@ -12,4 +11,4 @@ export default async function getWeekData(location) {
   } catch (e) {
     return e;
   }
-}
+};

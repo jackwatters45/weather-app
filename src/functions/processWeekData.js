@@ -1,7 +1,7 @@
-import { buildLower } from './dom';
+import buildLower from '../dom/buildLower';
 import determineWeatherImg from './determineWeatherImg';
 
-export default async function processWeekData(rawData) {
+export default async (rawData) => {
   const data = {};
 
   for (let i = 0; i < 5; i += 1) {
@@ -21,4 +21,4 @@ export default async function processWeekData(rawData) {
     data[i].date = days[new Date(date).getDay()];
   }
   return buildLower(data);
-}
+};
