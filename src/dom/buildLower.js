@@ -1,3 +1,5 @@
+import determineWeatherImg from '../functions/determineWeatherImg';
+
 export default async (data) => {
   const section = document.querySelector('.bottom-content');
   if (section) section.innerHTML = '';
@@ -26,7 +28,7 @@ export default async (data) => {
 
     // img
     const img = document.createElement('img');
-    img.src = date.weather;
+    img.src = determineWeatherImg(date.weather);
     card.appendChild(img);
 
     section.appendChild(card);

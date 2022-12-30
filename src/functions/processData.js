@@ -1,6 +1,5 @@
 import buildLower from '../dom/buildLower';
 import buildUpper from '../dom/buildUpper';
-import determineWeatherImg from './determineWeatherImg';
 
 export default (rawData) => {
   // CURRENT
@@ -12,7 +11,7 @@ export default (rawData) => {
   currentData.feelsLike = rawData.current.feels_like.toFixed(1);
   currentData.humidity = rawData.current.humidity.toFixed(0);
   currentData.wind = rawData.current.wind_speed.toFixed(1);
-  currentData.weatherImg = determineWeatherImg(rawData.current.weather[0].main);
+  currentData.weatherImg = rawData.current.weather[0].main;
 
   // format time
   const date = new Date();
@@ -39,7 +38,7 @@ export default (rawData) => {
     dayData.max = day.temp.max.toFixed(1);
     dayData.min = day.temp.min.toFixed(1);
 
-    dayData.weather = determineWeatherImg(day.weather[0].main);
+    dayData.weather = day.weather[0].main;
     const dayNum = new Date(day.dt * 1000).getDay();
     dayData.day = days[dayNum];
 

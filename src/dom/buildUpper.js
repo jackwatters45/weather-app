@@ -1,3 +1,5 @@
+import determineWeatherImg from '../functions/determineWeatherImg';
+
 export default async (data) => {
   // Weather Description
   const weatherDescription = document.querySelector('.weather-description');
@@ -13,7 +15,7 @@ export default async (data) => {
 
   // Image -> function to determine which Image
   const currentWeatherImg = document.querySelector('.current-weather-img');
-  currentWeatherImg.src = data.weatherImg;
+  currentWeatherImg.src = determineWeatherImg(data.weatherImg);
 
   // feels like
   const feelsLike = document.querySelector('.feels-like');
