@@ -1,12 +1,11 @@
 export default async (data) => {
-  // Top Left Section
   // Weather Description
   const weatherDescription = document.querySelector('.weather-description');
   weatherDescription.innerHTML = data.weatherDescription;
 
   // Location + time
-  const location = document.querySelector('.location');
-  location.innerHTML = `${data.location} - ${data.date}`;
+  const locationText = document.querySelector('.location');
+  locationText.innerHTML = `${data.name} - ${data.date}`;
 
   // Temperature
   const temp = document.querySelector('.weather-temp');
@@ -16,7 +15,6 @@ export default async (data) => {
   const currentWeatherImg = document.querySelector('.current-weather-img');
   currentWeatherImg.src = data.weatherImg;
 
-  // Top Right Section
   // feels like
   const feelsLike = document.querySelector('.feels-like');
   feelsLike.innerHTML = `${data.feelsLike} °F`;
