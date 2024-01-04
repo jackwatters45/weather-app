@@ -1,4 +1,34 @@
 # weather-app
 
-- eventually allow to change to celcius or change based on country
-- typing in giberish may return a location whose name contains the letters entered ie fd -> Foddhoo. This is kind of fun so I'm not going to try and fix. If the entered text returns no result nothing will happen (which is expected).
+Vanilla Js Weather App. User can search by city to find the current and 7 day forecast.
+
+## Live Project
+
+<https://jackwatters45.github.io/weather-app/>
+
+## Preview
+
+![Preview](https://res.cloudinary.com/drheg5d7j/image/upload/v1704338968/jackwatters45.github.io_weather-app__nw9fwc.webp)
+
+## Local Install
+
+```zsh
+git clone https://github.com/jackwatters45/weather-app.git
+
+npm install
+
+npm run start
+```
+
+## Contribute
+
+- Issue Tracker: <https://github.com/jackwatters45/weather-app/issues>
+- Source Code: <https://github.com/jackwatters45/weather-app/tree/main/src>
+
+## Support
+
+If you are having issues, please let me know at: <jack.watters@me.com>
+
+## License
+
+The project is licensed under the MIT license.
